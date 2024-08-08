@@ -1,6 +1,6 @@
 **Offline First Movies App**
 
-This is an offline-first moviews app. Pulls moview information from [themoviedb.org](url)
+This is an offline-first moviews app. Pulls moview information from [[themoviedb.org](https://www.themoviedb.org/)]
 
 Concepts used:
 
