@@ -26,7 +26,11 @@ class MovieListViewModel @Inject constructor(
         getUpcomingMovies(false)
     }
 
-    private fun onEvent(event: MovieListUiEvent) {
+    fun setCurrentTitle(title: String){
+        _movieListState.value.currentScreenTitle = title
+    }
+
+    fun onEvent(event: MovieListUiEvent) {
         when (event) {
             MovieListUiEvent.Navigate -> {
                 _movieListState.update {

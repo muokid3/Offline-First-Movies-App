@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Offline First Movies App</string>
+    <string name="popular">Popular</string>
+    <string name="upcoming">Upcoming</string>
 </resources>
