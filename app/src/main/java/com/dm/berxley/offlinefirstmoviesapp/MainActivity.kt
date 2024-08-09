@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.dm.berxley.offlinefirstmoviesapp.movieslist.presentation.MovieListViewModel
 import com.dm.berxley.offlinefirstmoviesapp.ui.theme.OfflineFirstMoviesAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +23,8 @@ class MainActivity : ComponentActivity() {
             OfflineFirstMoviesAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+
+                    val movieViewModel = hiltViewModel<MovieListViewModel>()
 
                 }
             }
