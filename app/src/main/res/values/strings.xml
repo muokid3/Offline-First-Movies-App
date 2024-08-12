@@ -2,4 +2,8 @@
     <string name="app_name">Offline First Movies App</string>
     <string name="popular">Popular</string>
     <string name="upcoming">Upcoming</string>
+    <string name="release_date">Release Date: %1$s</string>
+    <string name="votes">%1$s Votes</string>
+    <string name="language">Language: %1$s</string>
+    <string name="overview">Overview</string>
 </resources>
