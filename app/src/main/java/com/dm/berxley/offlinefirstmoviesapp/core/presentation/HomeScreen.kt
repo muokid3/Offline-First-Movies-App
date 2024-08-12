@@ -80,10 +80,18 @@ fun HomeScreen(navHostController: NavHostController) {
             .fillMaxSize()){
             NavHost(navController = bottomNavController, startDestination = Screen.PopularMovieList.route){
                 composable(Screen.PopularMovieList.route){
-                    PopularMoviesScreen()
+                    PopularMoviesScreen(
+                        navHostController = navHostController,
+                        movieListState = movieState,
+                        onEvent = movieListViewModel::onEvent
+                    )
                 }
                 composable(Screen.UpcomingMovieList.route){
-                    UpcomingMoviesScreen()
+                    UpcomingMoviesScreen(
+                        navHostController = navHostController,
+                        movieListState = movieState,
+                        onEvent = movieListViewModel::onEvent
+                    )
                 }
             }
         }
