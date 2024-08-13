@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.navigation.NavHostController
+import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
@@ -100,16 +101,26 @@ fun MovieItem(
             dominantColor =
                 getAverageColor(imageBitmap = imageState.result.drawable.toBitmap().asImageBitmap())
 
-            Image(
+            AsyncImage(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(6.dp)
                     .height(250.dp)
                     .clip(RoundedCornerShape(22.dp)),
-                painter = imageState.painter,
-                contentDescription = movie.title,
+                model = MovieApi.IMAGE_BASE_URL + movie.backdrop_path,
+                contentDescription = null,
                 contentScale = ContentScale.Crop
             )
+//            Image(
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .padding(6.dp)
+//                    .height(250.dp)
+//                    .clip(RoundedCornerShape(22.dp)),
+//                painter = imageState.painter,
+//                contentDescription = movie.title,
+//                contentScale = ContentScale.Crop
+//            )
         }
 
         Spacer(modifier = Modifier.height(6.dp))
