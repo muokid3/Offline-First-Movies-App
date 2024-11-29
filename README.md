@@ -4,7 +4,7 @@ This is an offline-first moviews app. Pulls moview information from [[themoviedb
 
 Concepts used:
 
-1. MVVM UI architecture
+1. MVVM Presentational Pattern
 2. Dependency Injection with Hilt
 3. Retrofit
 4. Room DB
